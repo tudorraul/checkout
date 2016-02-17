@@ -11,7 +11,8 @@ class CheckoutSystem() {
       case (itemType: Apple, apples) =>
         itemType.priceInPence * ((apples.size + 1) / 2)
 
-      case (itemType: Orange, oranges) => ???
+      case (itemType: Orange, oranges) =>
+        itemType.priceInPence * (2 * (oranges.size / 3) + oranges.size % 3)
     }.sum
 
 }
