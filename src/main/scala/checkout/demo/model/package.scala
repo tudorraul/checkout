@@ -2,8 +2,12 @@ package checkout.demo
 
 package object model {
 
-  case class Apple(priceInPence:Int = 60)
+  sealed trait Item {
+    val priceInPence: Int
+  }
 
-  case class Orange(priceInPence:Int = 25)
+  case class Apple(priceInPence: Int = 60) extends Item
+
+  case class Orange(priceInPence: Int = 25) extends Item
 
 }

@@ -12,4 +12,9 @@ class ModelSpec extends Specification {
     Orange().priceInPence mustEqual 25
   }
 
+  "Apples and Oranges are considered Items" >> {
+    Orange() must haveInterface[Item]
+    Apple() must haveInterface[Item]
+  }
+
 }
